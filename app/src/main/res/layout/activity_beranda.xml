@@ -5,22 +5,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fafafa"
-    tools:context=".ActivityBeranda">
+    android:background="#eeeefb"
+    tools:context=".BerandaActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/top_beranda"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="370dp"
+            android:layout_height="match_parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -31,7 +30,7 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="25dp"
             android:text="RANGKUMAN BULAN INI"
             android:textStyle="bold"
             android:textColor="#ffffff"
@@ -54,7 +53,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:adjustViewBounds="true"
-            android:layout_marginTop="50dp">
+            android:layout_marginTop="70dp">
 
             <TextView
                 android:layout_width="120dp"
@@ -102,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/jdl_pengeluaran"
                 android:layout_marginLeft="-325dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="45dp"
                 android:layout_marginRight="0dp"
                 android:layout_marginBottom="10dp"
                 android:text="Pemasukan : "
@@ -115,7 +114,7 @@
                 android:id="@+id/rp_pemasukan"
                 android:layout_below="@+id/total_pengeluaran"
                 android:text="Rp. "
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="45dp"
                 android:layout_marginLeft="0dp"
                 android:layout_marginRight="0dp"
                 android:layout_marginBottom="10dp"
@@ -129,7 +128,7 @@
                 android:id="@+id/total_pemasukan"
                 android:layout_below="@+id/total_pengeluaran"
                 android:text=""
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="45dp"
                 android:layout_marginLeft="0dp"
                 android:layout_marginRight="0dp"
                 android:layout_marginBottom="10dp"
@@ -142,7 +141,7 @@
         <LinearLayout
             android:id="@+id/cardGrafik"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="160dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/white_background"
@@ -152,7 +151,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cardIncomeOutcome"
             android:adjustViewBounds="true"
-            android:layout_marginTop="138dp">
+            android:layout_marginTop="170dp">
 
             <TextView
                 android:layout_width="120dp"
@@ -170,10 +169,11 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/layout_top"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
             android:elevation="2dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -185,76 +185,144 @@
 
             <LinearLayout
                 android:id="@+id/income"
-                android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/edittext_login"
+                android:background="@drawable/button_beranda"
                 android:backgroundTint="#69EA6E"
                 android:gravity="center"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
                 >
 
                 <ImageView
                     android:id="@+id/icon_income"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:src="@drawable/btn_pemasukan" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:src="@drawable/btn_pemasukan"
+                    />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/icon_income"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="29dp"
                     android:text="Tambah Pemasukkan"
                     android:textColor="@color/white"
-                    android:textStyle="bold" />
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textSize="14dp"
+                    android:textStyle="bold"/>
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/outcome"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/edittext_login"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_beranda"
                 android:backgroundTint="#E484A5"
                 android:gravity="center"
-                android:orientation="vertical"
-                android:padding="5dp">
+                android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:src="@drawable/btn_pemasukan" />
+                    android:id="@+id/icon_outcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:src="@drawable/btn_pengeluaran" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="29dp"
                     android:text="Tambah Pengeluaran"
                     android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textSize="14dp"
                     android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/bottom_beranda"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <ImageView
-            android:id="@+id/bg_bottomberanda"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <LinearLayout
+            android:id="@+id/layout_below"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:elevation="2dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_top"
             android:adjustViewBounds="true"
-            app:srcCompat="@drawable/bottom_bgberanda" />
+            android:layout_marginTop="475dp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/detailflow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button_beranda"
+                android:backgroundTint="#69EA6E"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:id="@+id/icon_detailFlow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:src="@drawable/btn_detailcashflow"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="29dp"
+                    android:text="Detail Cash Flow"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textSize="14dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pengaturan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_beranda"
+                android:backgroundTint="#E484A5"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/icon_pengaturan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:src="@drawable/btn_pengaturan" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="29dp"
+                    android:text="Pengaturan"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

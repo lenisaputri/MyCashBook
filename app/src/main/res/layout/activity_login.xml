@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fafafa"
-    tools:context=".ActivityLogin">
+    android:background="#eeeefb"
+    tools:context=".LoginActivity">
 
     <ImageView
         android:id="@+id/top_bg"
@@ -38,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="0dp"
-        android:textColor="#9a48f7"
+        android:textColor="#8447c9"
         android:textSize="30dp"
         android:textStyle="bold"
         android:text="My Cash Book"
