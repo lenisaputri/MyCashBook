@@ -99,6 +99,7 @@
                 android:layout_marginTop="5dp"
                 android:background="@drawable/edittext_login"
                 android:inputType="number"
+                android:paddingLeft="10dp"
                 android:textSize="18dp" />
 
             <TextView
@@ -115,6 +116,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="47dp"
                 android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
                 android:background="@drawable/edittext_login"
                 android:singleLine="true"
                 android:textSize="18dp" />

@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(username.getText().toString().equals("") || password.getText().toString().equals("")){
                     username.setError("");
                     password.setError("");
-                    Toast.makeText(LoginActivity.this, "Harap Lengkapi Data Anda", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Data Harus diisi", Toast.LENGTH_SHORT).show();
                 } else {
                     AksesDB aksesDB = AksesDB.getInstance(LoginActivity.this);
                     aksesDB.open();

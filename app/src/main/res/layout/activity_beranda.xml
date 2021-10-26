@@ -153,18 +153,10 @@
             android:adjustViewBounds="true"
             android:layout_marginTop="170dp">
 
-            <TextView
-                android:layout_width="120dp"
+            <ImageView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/gambar"
-                android:layout_below="@+id/judulRangkuman"
-                android:text="Pengeluaran : "
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                android:textColor="@color/red"
-                android:textSize="19dp"
+                android:src="@drawable/img_grafik"
                 />
         </LinearLayout>
 
@@ -188,8 +180,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/button_beranda"
-                android:backgroundTint="#69EA6E"
+                android:background="@drawable/button_menu"
                 android:gravity="center"
                 android:layout_margin="5dp"
                 android:orientation="vertical"
@@ -221,8 +212,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
-                android:background="@drawable/button_beranda"
-                android:backgroundTint="#E484A5"
+                android:background="@drawable/button_menu"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -266,8 +256,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/button_beranda"
-                android:backgroundTint="#69EA6E"
+                android:background="@drawable/button_menu"
                 android:gravity="center"
                 android:layout_margin="5dp"
                 android:orientation="vertical"
@@ -299,8 +288,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
-                android:background="@drawable/button_beranda"
-                android:backgroundTint="#E484A5"
+                android:background="@drawable/button_menu"
                 android:gravity="center"
                 android:orientation="vertical">
 

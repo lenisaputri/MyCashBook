@@ -76,7 +76,7 @@ public class IncomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(input_nominal.getText().toString().equals("") || input_keterangan.getText().toString().equals("")){
-                    Toast.makeText(IncomeActivity.this, "Harap Lengkapi Data Anda", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(IncomeActivity.this, "Data Harus diisi", Toast.LENGTH_SHORT).show();
                 } else {
                     Integer jumlah = Integer.valueOf(input_nominal.getText().toString());
                     AksesDB aksesDB = AksesDB.getInstance(IncomeActivity.this);
@@ -85,10 +85,10 @@ public class IncomeActivity extends AppCompatActivity {
                     boolean isInserted = aksesDB.insertMoney(jumlah, input_keterangan.getText().toString(), tanggal.getText().toString(), "income");
 
                     if(isInserted){
-                        Toast.makeText(IncomeActivity.this, "Berhasil Memasukkan Pemasukkan", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(IncomeActivity.this, "Data Pemasukan Berhasil Disimpan", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(IncomeActivity.this, BerandaActivity.class));
                     } else {
-                        Toast.makeText(IncomeActivity.this, "Gagal Memasukkan Pemasukkan", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(IncomeActivity.this, "Data Pemasukan Gagal Disimpan", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
